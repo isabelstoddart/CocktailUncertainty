@@ -37,7 +37,7 @@ It also includes a rough prototype in Figma that envisions this concept using ju
 
 ### Iteration 2
 
-My second iteration includes a map that visualizes the uncertainty around who invented the margarita. I wanted to add more of a story to my visualization so I thought this would be a nice addition. 
+My second iteration includes a map that visualizes the uncertainty around who invented each cocktail. I wanted to add more of a story to my visualization so I thought this would be a nice addition. 
 
 ![](prototypes/iteration2pic1.png)
 
