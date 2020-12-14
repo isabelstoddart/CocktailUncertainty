@@ -1,5 +1,7 @@
 # Cocktail Uncertainty
 
+## Final Project: https://isabelstoddart.github.io/CocktailUncertainty/
+
 The purpose of this project was to visualize the many variations in cocktail recipes and the uncertainty around which ingredients are included in a recipe. This project was completed for Data Visualization and Information Aesthetics at Parsons School of Design. 
 
 ### Data
@@ -62,3 +64,5 @@ My final product turns my final prototype into code. For my final product I ende
 ![](prototypes/finalpic2.png)
 
 The final product can be found at: https://isabelstoddart.github.io/CocktailUncertainty/
+
+Interactive pie chart code inspired by: https://bl.ocks.org/tezzutezzu/c2653d42ffb4ecc01ffe2d6c97b2ee5e
