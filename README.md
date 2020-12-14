@@ -11,4 +11,4 @@ The data was taken from 5 online cocktail databases:
 * Mixology Recipes (https://www.mixology.recipes/cocktails)
 * Awesome Drinks (https://recipe.awesomedrinks.com/)
 
-The finalized dataset 
+The finalized dataset is cocktailsData.xsls
