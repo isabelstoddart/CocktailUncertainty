@@ -11,4 +11,10 @@ The data was taken from 5 online cocktail databases:
 * Mixology Recipes (https://www.mixology.recipes/cocktails)
 * Awesome Drinks (https://recipe.awesomedrinks.com/)
 
-The finalized dataset is cocktailsData.xsls
+The finalized dataset is cocktailsData.xlsx
+
+### Iteration 1
+
+My first iteration included several sketches of what I invisioned the final product looking like. 
+
+
