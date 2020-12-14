@@ -168,7 +168,7 @@
 
     label.append("input")
     .attr("type", "radio")
-    .attr("name", "fruit") //use this to change into buttons or something like that
+    .attr("name", "fruit")
     .attr("value", function(d) { return d.key})
     .on("change", change)
     .filter(function(d, i) { return !i; })
