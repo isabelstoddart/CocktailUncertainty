@@ -1,0 +1,26 @@
+ingredient	version	count
+rum	The Cocktail DB	1.5
+limejuice	The Cocktail DB	0.5
+psugar	The Cocktail DB	0.167
+gsyrup	The Cocktail DB	0
+ssyrup	The Cocktail DB	0
+rum	Mixology Recipes	2.25
+limejuice	Mixology Recipes	0.25
+psugar	Mixology Recipes	0
+gsyrup	Mixology Recipes	0.0625
+ssyrup	Mixology Recipes	0
+rum	Awesome Drinks	2
+limejuice	Awesome Drinks	0.75
+psugar	Awesome Drinks	0
+gsyrup	Awesome Drinks	0
+ssyrup	Awesome Drinks	0.75
+rum	Intl. Bartenders Association	2
+limejuice	Intl. Bartenders Association	0.75
+psugar	Intl. Bartenders Association	0.34
+gsyrup	Intl. Bartenders Association	0
+ssyrup	Intl. Bartenders Association	0
+rum	Kindred Cocktails	2
+limejuice	Kindred Cocktails	0.5
+psugar	Kindred Cocktails	0
+gsyrup	Kindred Cocktails	0
+ssyrup	Kindred Cocktails	0.167

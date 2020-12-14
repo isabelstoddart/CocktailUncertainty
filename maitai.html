@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<title>Cocktail Uncertainty</title>
+<meta charset="utf-8">
+
+<style type="text/css">
+  *{
+    margin:0;padding:0;
+    box-sizing: border-box;
+  }
+
+   @font-face{
+    src: url(leafy.otf);
+    font-family: Leafy;
+   }  
+
+   h1 {
+    font-size: 50px;
+    padding-bottom: 5px;
+    padding-top:20px;
+    text-align: center;
+    vertical-align: center;
+    position:static;
+   } 
+
+   h2 {
+    font-size: 30px;
+    text-align: center;
+    vertical-align: center;
+   } 
+
+  body {
+    display: inline-block;
+    font-family: Leafy;
+    font-size: 25px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height:100%;
+    background-color: #FAFAEC;
+    background-image:url(images/maitaikey.png);  
+    background-position:top 422px right 220px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    text-align: center;
+    vertical-align: center;
+    justify-content: center;
+  }
+
+  text {
+    font: 40px Leafy;
+  }
+
+  form {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    height:50px;
+    text-align: center;
+    font-size: 30px;
+    padding-right: 60px;
+  }
+
+  input {
+    margin: 0 7px;
+  }
+
+  svg{
+      padding-top: 5px;
+
+      width: 700px;
+      height:450px;
+  }
+
+  img{
+    margin-top:10px;
+
+    height:200px;
+    text-align:center;
+    vertical-align: center;
+  }
+
+  .img2{
+    width: 70px;
+    height:100px;
+    text-align:center;
+    vertical-align: center;
+  }
+
+  #button {
+        padding-left:30px;
+        width: 70px;
+        height: 10px;
+        border: none;
+        background-color: #FAFAEC;
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        vertical-align: left;
+        position: relative;
+    }
+
+    a {
+        vertical-align: left;
+        width: 70px;
+        height: 10px;
+        text-align: center;
+        text-decoration: none;
+        color:rgb(0, 0, 0);
+        font-family: Leafy;
+    }
+
+    a:hover {
+        background-color: #FAFAEC;
+        opacity: 0.5;
+    }
+
+</style>
+<div id="button"><a href="index.html"><img class="img2" src="images/arrow.png"></a><a class="et_pb_button"></a></div>
+<body>
+  <h1>Variations of the Mai Tai Recipe</h1>
+  <h2>Taken from 5 online cocktail databases</h2>
+  <img src="images/TAIS.png" alt="Mai Tai Variations">
+  <form></form>
+</body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+  var myDuration = 600;
+  var firstTime = true;
+
+  var width = 650,
+  height = 350,
+  radius = Math.min(width, height) / 2;
+
+  var width = 650,
+  height = 350,
+  radius = Math.min(width, height) / 2;
+
+  var color = d3.scaleOrdinal()
+  .domain(["lightrum", "osyrup", "tsec", "sas", "darkrum","limejuice","ocuracao","gren","falernum","ssyrup"])
+  .range(["#eae9e5", "#FFEACB", "#f99d1e", "#f9ef6e", "#af4a2a","#c6da4e","#f05928","#ed2024","#e2ecb4","#40becd"]);
+
+  var pie = d3.pie()
+  .value(function(d) { return d.count; })
+  .sort(null);
+
+  var arc = d3.arc()
+  .innerRadius(0)
+  .outerRadius(radius - 20);
+
+  var svg = d3.select("body").append("svg")
+  .attr("width", width)
+  .attr("height", height)
+  .append("g")
+  .attr("transform", "translate(" + width / 2.5 + "," + height / 2.2 + ")");
+
+
+
+
+  d3.tsv("data/maitai.tsv", type, function(error, data) {
+    var ingredientsByPlace = d3.nest()
+    .key(function(d) { return d.version; })
+    .entries(data)
+    .reverse();
+
+    var label = d3.select("form").selectAll("label")
+    .data(ingredientsByPlace)
+    .enter().append("label");
+
+    label.append("input")
+    .attr("type", "radio")
+    .attr("name", "fruit") //use this to change into buttons or something like that
+    .attr("value", function(d) { return d.key})
+    .on("change", change)
+    .filter(function(d, i) { return !i; })
+    .each(change)
+    .property("checked", true);
+
+    label.append("span")
+    .text(function(d) { return d.key});
+    
+
+    function change(ingredient) {
+      var path = svg.selectAll("path");
+      var data0 = path.data(),
+      data1 = pie(ingredient.values);
+
+      path = path.data(data1, key);
+
+      path
+      .transition()
+      .duration(myDuration)
+      .attrTween("d", arcTween)
+
+
+      path
+      .enter()
+      .append("path")
+      .each(function(d, i) {
+        var narc = findNeighborArc(i, data0, data1, key) ;
+        if(narc) {          
+          this._current = narc;
+          this._previous = narc;
+        } else {          
+          this._current = d;
+        }
+      }) 
+      .attr("fill", function(d,i) { 
+       return color(d.data.ingredient)
+     })
+      .attr("stroke", "black")
+      .style("stroke-width", "4px")
+      .transition()
+      .duration(myDuration)
+      .attrTween("d", arcTween)
+
+      path
+      .exit()
+      .transition()
+      .duration(myDuration)
+      .attrTween("d", function(d, index) {
+
+        var currentIndex = this._previous.data.ingredient;
+        var i = d3.interpolateObject(d,this._previous);
+        return function(t) {
+          return arc(i(t))
+        }
+
+      })
+      .remove()
+
+
+      firstTime = false;
+
+
+    }
+  });
+
+  function key(d) {
+    return d.data.ingredient;
+  }
+
+  function type(d) {
+    d.count = +d.count;
+    return d;
+  }
+
+  function findNeighborArc(i, data0, data1, key) {
+    var d;
+    if(d = findPreceding(i, data0, data1, key)) {
+
+      var obj = cloneObj(d)
+      obj.startAngle = d.endAngle;
+      return obj;
+
+    } else if(d = findFollowing(i, data0, data1, key)) {
+
+      var obj = cloneObj(d)
+      obj.endAngle = d.startAngle;
+      return obj;
+
+    }
+
+    return null
+
+
+  }
+
+// Find the element in data0 that joins the highest preceding element in data1.
+function findPreceding(i, data0, data1, key) {
+  var m = data0.length;
+  while (--i >= 0) {
+    var k = key(data1[i]);
+    for (var j = 0; j < m; ++j) {
+      if (key(data0[j]) === k) return data0[j];
+    }
+  }
+}
+
+// Find the element in data0 that joins the lowest following element in data1.
+function findFollowing(i, data0, data1, key) {
+  var n = data1.length, m = data0.length;
+  while (++i < n) {
+    var k = key(data1[i]);
+    for (var j = 0; j < m; ++j) {
+      if (key(data0[j]) === k) return data0[j];
+    }
+  }
+}
+
+function arcTween(d) {
+
+  var i = d3.interpolate(this._current, d);
+
+  this._current = i(0);
+
+  return function(t) {
+    return arc(i(t))
+  }
+
+}
+
+
+function cloneObj(obj) {
+  var o = {};
+  for(var i in obj) {
+    o[i] = obj[i];
+  }
+  return o;
+}
+</script>

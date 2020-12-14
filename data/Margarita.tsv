@@ -1,0 +1,26 @@
+ingredient	version	count
+tequila	The Cocktail DB	1.5
+triplesec	The Cocktail DB	0.5
+limejuice	The Cocktail DB	1
+agave	The Cocktail DB	0
+cointreau	The Cocktail DB	0
+tequila	Mixology Recipes	1.5
+triplesec	Mixology Recipes	0.5
+limejuice	Mixology Recipes	0.75
+agave	Mixology Recipes	0
+cointreau	Mixology Recipes	0
+tequila	Awesome Drinks	2
+triplesec	Awesome Drinks	0
+limejuice	Awesome Drinks	1
+agave	Awesome Drinks	0.75
+cointreau	Awesome Drinks	0.75
+tequila	Intl. Bartenders Association	1.75
+triplesec	Intl. Bartenders Association	0.75
+limejuice	Intl. Bartenders Association	0.5
+agave	Intl. Bartenders Association	0
+cointreau	Intl. Bartenders Association	0
+tequila	Kindred Cocktails	2
+triplesec	Kindred Cocktails	0
+limejuice	Kindred Cocktails	1
+agave	Kindred Cocktails	0
+cointreau	Kindred Cocktails	1

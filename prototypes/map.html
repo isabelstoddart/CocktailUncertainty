@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<!-- Load d3.js and the geo projection plugin -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+<!-- Create an element where the map will take place -->
+<div id="my_dataviz"></div>
+
+<style>
+  @font-face{
+    src: url(leafy.otf);
+    font-family: Leafy;
+   }  
+
+  .circle:hover{
+    stroke: black;
+    stroke-width: 4 px;
+  }
+  body{
+        background-color: #FAFAEC;
+    }
+
+  div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 250px;					
+    height:200px;					
+    padding: 2px;				
+    font: 17px Leafy;		
+    background: rgb(255,255,255);	
+    border: solid;		
+    border-radius: 8px;			
+    pointer-events: none;			
+    }
+</style>
+
+<body>
+    <script src="map.js"></script>
+
+</body>
+</html>
