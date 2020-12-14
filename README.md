@@ -17,7 +17,7 @@ The finalized dataset is cocktailsData.xlsx
 
 ### Project Proposal
 
-My project proposal includes several sketches of what I invisioned the final product looking like. 
+My project proposal includes several sketches of what I invisioned the final product to look like. 
 
 ![](prototypes/cocktailvizsketch1.jpg)
 ![](prototypes/cocktailvizsketch2.jpg)
