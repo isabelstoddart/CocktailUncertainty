@@ -30,7 +30,7 @@ My second iteration includes a final sketch mockup with 11 cocktails and pie cha
 
 It also included a rough prototype in Figma that envisions this concept using just the margarita recipes. 
 
-![](CocktailUncertaintyProto.pdf)
+![](CocktailUncertaintyProto.png)
 
 ### Iteration 3
 
