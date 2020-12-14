@@ -56,7 +56,7 @@ The full Figma prototype can be found at: https://www.figma.com/proto/asKmhJ9uaA
 
 ## Final Product
 
-My final product turns my final prototype into code. For my final product I ended up just visualizing 5 cocktails (Margarita, Mai Tai, Cosmopolitan, Paloma, and Daquiri). I added in an image that shows the ingredients in the actual cocktail glasses and changed the mutliple pie charts into one interactive pie chart. I decided to get rid of the map in the end because I thought having the two levels of uncertainty took away from the main purpose of the project, which was to show the variations in cocktail recipes. 
+My final product turns my final prototype into code. For my final product I ended up just visualizing 5 cocktails (Margarita, Mai Tai, Cosmopolitan, Paloma, and Daquiri). I added in an image that shows the ingredients in the actual cocktail glasses and changed the mutliple pie charts into one interactive pie chart. I decided to get rid of the map in the end because I thought having the two levels of uncertainty took away from the main purpose of the project, which is to show the variations in cocktail recipes. 
 
 ![](prototypes/finalpic1.png)
 ![](prototypes/finalpic2.png)
