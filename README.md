@@ -32,25 +32,25 @@ My first iteration includes a final sketch mockup with 11 cocktails and pie char
 
 It also includes a rough prototype in Figma that envisions this concept using just the margarita recipes. 
 
-![](prototypes/iteration1pic1)
-![](prototypes/iteration1pic2)
+![](prototypes/iteration1pic1.png)
+![](prototypes/iteration1pic2.png)
 
 ### Iteration 2
 
 My second iteration includes a map that visualizes the uncertainty around who invented the margarita. I wanted to add more of a story to my visualization so I thought this would be a nice addition. 
 
-![](prototypes/iteration2pic1)
+![](prototypes/iteration2pic1.png)
 
 It also includes a page with the original margarita recipe. This page is used to tie together the uncertainty behind who created the margarita with the uncertainty around the modern variations of the margarita. 
 
-![](prototypes/iteration2pic2)
+![](prototypes/iteration2pic2.png)
 
 ### Final Prototype
 
 My final prototype cleaned up my past iteration by combining the original margarita recipe page and the pie chart page to create one page with all of the pie charts. I also thought a lot about user experience for this iteration and made the project easier to navigate by adding buttons to each page that make it easier to get to all of the other pages.
 
-![](finalprotopic1)
-![](finalprotopic2)
+![](finalprotopic1.png)
+![](finalprotopic2.png)
 
 The full Figma prototype can be found at: https://www.figma.com/proto/asKmhJ9uaATB3ffDKu10iE/CocktailUncertaintyProto?node-id=101%3A194&scaling=min-zoom
 
