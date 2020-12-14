@@ -50,7 +50,7 @@ It also includes a page with the original margarita recipe. This page is used to
 My final prototype cleaned up my past iteration by combining the original margarita recipe page and the pie chart page to create one page with all of the pie charts. I also thought a lot about user experience for this iteration and made the project easier to navigate by adding buttons to each page that make it easier to get to all of the other pages.
 
 ![](prototypes/finalprotopic1.png)
-![](prototypes/finalprotopic2.png)
+![](prototypes/finalprotopic3.png)
 
 The full Figma prototype can be found at: https://www.figma.com/proto/asKmhJ9uaATB3ffDKu10iE/CocktailUncertaintyProto?node-id=1%3A2&scaling=min-zoom
 
