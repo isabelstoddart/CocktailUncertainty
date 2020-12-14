@@ -52,7 +52,7 @@ My final prototype cleaned up my past iteration by combining the original margar
 ![](finalprotopic1.png)
 ![](finalprotopic2.png)
 
-The full Figma prototype can be found at: https://www.figma.com/proto/asKmhJ9uaATB3ffDKu10iE/CocktailUncertaintyProto?node-id=101%3A194&scaling=min-zoom
+The full Figma prototype can be found at: https://www.figma.com/proto/asKmhJ9uaATB3ffDKu10iE/CocktailUncertaintyProto?node-id=1%3A2&scaling=min-zoom
 
 ## Final Product
 
